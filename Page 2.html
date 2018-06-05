@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns = "http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>Page 2</title>
+
+<link rel="stylesheet" type="text/css" href="Page2Styles.css">
+
+<script language = "JavaScript">
+
+  function HFFunction() {
+	alert("Khalid");
+  }
+
+  function TextFunction() {
+ 	var x = document.getElementById("myText").value;
+	alert("The text says: " + x);
+  }
+
+  function  RadioFunction1() {
+    var x = document.getElementById("myRadio").value;
+  		    
+    alert ("You selected " + x);
+   
+  }
+
+  function  RadioFunction2() {
+    var x = document.getElementById("myRadio2").value;
+  		    
+    alert ("You selected " + x);
+   
+  }
+
+  function  RadioFunction3() {
+    var x = document.getElementById("myRadio3").value;
+  		    
+    alert ("You selected " + x);
+   
+  }
+
+	  
+  function  CheckboxFunction1() {
+    var x = document.getElementById("myCheck").value;
+  		    
+    alert ("You selected " + x);
+   
+  }
+ 
+  function  CheckboxFunction2() {
+    var x = document.getElementById("myCheck2").value;
+  		    
+    alert ("You selected " + x);
+   
+  }
+
+  function  CheckboxFunction3() {
+    var x = document.getElementById("myCheck3").value;
+  		    
+    alert ("You selected " + x);
+   
+  }
+
+  function SelectFunction() {
+  		var x = document.getElementById("mySelect");
+
+  		var z = x.options[x.selectedIndex].value; 
+  		var y = x.options[x.selectedIndex].text; 
+  		
+  		alert("You selected " + z);
+  		alert("You selected " + y);
+
+  }
+</script>
+</head>
+
+<body>
+<form method="post" action="">
+
+<table border="1" cellpadding="0" cellspacing="0">  
+	<!-- Table is flipped horizontally because  m4 = 1-->
+
+	<!-- B content has description of desired eading with font-size = 60-->
+<tr> 
+	<th rowspan="2"> 
+		 <p>The novel begins with a Notice from someone named G. G., who is identified as the Chief of Ordnance. The Notice demands that no one try to find a motive, moral, or plot in the novel, on pain of various and sundry punishments. The Notice is followed by an Explanatory note from the Author, which states that the attention to dialects in the book has been painstaking and is extremely true-to-life in mimicking the peculiar verbal tendencies of individuals along the Mississippi. It assures the reader that if he or she feels that the characters in the book are trying to talk alike but failing, then the reader is mistaken. </p>
+	</th> 
+	<!-- A1 content has picture of a city-->	
+
+	<th><img src="pic_seattle.jpg" alt="Picture of the city Seattle" width="200px" height="100px"> 
+	</th> 
+
+	<!-- DD content has drop down list with 4 options-->
+	<th width="20%">
+	<select id="mySelect" name ="mySelect" onchange="SelectFunction()">
+		<option value = "2">Two</option> 
+		<option value = "1">One</option> 
+		<option value = "4">Four</option> 
+		<option value = "5">Five</option> 
+	</select> 
+
+	</th>
+
+	<!-- F1 content has last/first name-->	
+	<td class="custom1">Ahmed, Khalid</td>
+
+</tr>
+	<!-- A2 content has picture of a village-->
+<tr>
+	<td><img src="pic_village.jpg" alt="Picture of a village" width="200px" height="100px">
+	</td> 
+
+	<!-- F2 content has name of book-->	
+	<td width="20%">The Adventures of Finn</td>
+
+	<!-- IT content has input text-->
+	<td><input type="text" id= "myText" onchange="TextFunction()" /> 
+	</td>
+</tr>
+
+	<!-- M content has picture of a mountain wtih name below picture -->
+
+<tr>
+	<td width="35%"><img src="pic_mountfuji.jpg" alt="Picture of Mount Fuji" width="200px" height="160px">
+	The name of the mountain is Mount Fuji</td>
+
+ 	<!--RB content has 3 radio buttons with exclusive option names -->
+ 	<td>
+ 		<input type="radio" id="myRadio" onchange="RadioFunction1()" name="soccer" value="C.Ronaldo">C.Ronaldo <br />
+  		<input type="radio" id="myRadio2" onchange="RadioFunction2()" name="soccer" value="Messi">Messi <br />
+  		<input type="radio" id="myRadio3" onchange="RadioFunction3()" name="soccer" value="Neymar">Neymar 
+  	</td>
+
+ 	<!-- H content has short poem in italics font-->
+	<td width="20%"><div> I come with no wrapping or pretty pink bows. I am who I am, from my head to my toes. I tend to get loud when speaking my mind. Even a little crazy some of the time. I'm not a size 5 and don't care to be.</div></td>
+
+ 	<!-- CB content make 3 check boxes with names-->	
+	<td><input type="checkbox" id="myCheck" onchange="CheckboxFunction1()" name="Player" value="Kobe" />Kobe Bryant <br />
+	<input type="checkbox" id="myCheck2" onchange="CheckboxFunction2()" name="Player" value="Shaquille" /> Shaquille O'Neal <br />
+	<input type="checkbox" id="myCheck3" onchange="CheckboxFunction3()" name="Player" value="Stephen" /> Stephen A. Smith</td>
+</tr>
+</table> 
+<table border="0" cellspacing="0" cellspacing="0" width="83%">
+<tr>
+	<!-- The hidden field-->
+	<input type= "hidden" name= "Khalid" value = "Khalid"/>
+
+	<!--The three buttons-->
+	<td width="33%" ><input class="custom2" type="button" name="Button3" value="Button3"></td>
+	<td width="30%" ><input class="custom2" type="button" name="Button2" value="Button2"></td>
+	<td width="20%" ><input class="custom2" type="submit" onclick="HFFunction()" name="Button1" value="Button1"></td>
+	
+	
+
+</tr>
+
+</table>
+</form>
+</body>
+</html>
